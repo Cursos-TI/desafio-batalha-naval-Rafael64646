@@ -1,9 +1,10 @@
 #include <stdio.h>
+
 int main(){
     int tabela[10][10]={0};
     int coluna[10]={1,2,3,4,5,6,7,8,9,10};
     char tabuleiro[10]={'A','B','C','D','E','F','G','H','I','J'};
-
+    int tabelaD[10][10];
 //primeiro barco
 tabela[1][2]=3;
 tabela[1][1]=3;
@@ -13,12 +14,21 @@ tabela[1][3]=3;
 tabela[8][8]=3;
 tabela[7][8]=3;
 tabela[6][8]=3;
+//barco na diagonal 
+
+tabela[3][3] = 3;
+tabela[2][4] = 3;
+tabela[1][5] = 3;
+
+//barco na diagonal 2
+ tabela[7][3] = 3;
+ tabela[8][4] = 3;
+ tabela[9][5] = 3;
 
 //letras
 printf("   ");
     for (int i = 0; i < 10; i++)
     {
-       
        printf(" %c ",tabuleiro[i]);  
     }
     printf("\n");
@@ -27,11 +37,14 @@ printf("   ");
 //tabela de 0(agua) e a coluna de numeros
 for (int i = 0; i < 10; i++) {
         printf("%2d ", coluna[i]); 
-        for (int j = 0; j < 10; j++) {
+       for  (int j = 0; j < 10; j++) {
             printf(" %d ", tabela[i][j]); 
         }
         printf("\n");
     }
 
+    
+
+  
     return 0;
 }
