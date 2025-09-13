@@ -14,17 +14,19 @@ tabela[1][3]=3;
 tabela[8][8]=3;
 tabela[7][8]=3;
 tabela[6][8]=3;
-//barco na diagonal 
 
-tabela[3][3] = 3;
-tabela[2][4] = 3;
-tabela[1][5] = 3;
 
-//barco na diagonal 2
- tabela[7][3] = 3;
- tabela[8][4] = 3;
- tabela[9][5] = 3;
+//barco 1 na diagonal
+for (int i = 3; i < 6; i++) {
+        tabela[i][i] = 3;   
+    }
+//barco 2 na segunda diagonal
+     for (int j = 9 , i = 0; j > 6 , i < 3; j-- , i++){     
+            tabela[i][j] = 3;    
+    }
 
+
+    
 //letras
 printf("   ");
     for (int i = 0; i < 10; i++)
@@ -43,8 +45,6 @@ for (int i = 0; i < 10; i++) {
         printf("\n");
     }
 
-    
 
-  
     return 0;
 }
